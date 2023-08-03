@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+    <title>oggetti JSON</title>
+</head>
+<body onload="crea()">
+    <h1>JSON del Big Button</h1>
+    <div class="ricerca">
+      <input type="text" onkeydown="ricerca(event)"  id="ricercaDati">
+    </div>
+    <div id="contenitore">
+    </div>
+    <div>
+        <form>
+          <input id="name" type="text" placeholder="Name" required>
+          <input id="id" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="6" placeholder="ID" required>
+          <button onclick="aggiungi()" type="button">Aggiungi</button>
+          <br><br>
+          <select id="modifica">
+          </select>
+          <button onclick="elimina()" type="button">Elimina</button>
+          <button onclick="ok()" type="button">Modifica</button>
+        </form>
+    </div>
+    <div id="MOD" style="margin-top: 50px; display: none;">
+      <form>
+        <input id="nameMod" type="text" placeholder="Name" required>
+        <input id="idMod" type="text" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" maxlength="6" placeholder="ID" required>
+        <button onclick="conferma()" type="button">Conferma</button>
+      </form>
+    </div>
+  </body>
+</html>
